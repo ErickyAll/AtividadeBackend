@@ -1,0 +1,15 @@
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\bin\Debug\net6.0\AtividadeBackend.exe
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\bin\Debug\net6.0\AtividadeBackend.deps.json
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\bin\Debug\net6.0\AtividadeBackend.runtimeconfig.json
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\bin\Debug\net6.0\AtividadeBackend.dll
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\bin\Debug\net6.0\AtividadeBackend.pdb
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\AtividadeBackend.csproj.AssemblyReference.cache
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\AtividadeBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\AtividadeBackend.AssemblyInfoInputs.cache
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\AtividadeBackend.AssemblyInfo.cs
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\AtividadeBackend.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\AtividadeBackend.dll
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\refint\AtividadeBackend.dll
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\AtividadeBackend.pdb
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\AtividadeBackend.genruntimeconfig.cache
+C:\Users\Usuário\Documents\Senai FullStack\AtividadeBackend\obj\Debug\net6.0\ref\AtividadeBackend.dll
