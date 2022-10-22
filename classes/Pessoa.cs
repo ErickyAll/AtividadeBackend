@@ -7,9 +7,9 @@ namespace AtividadeBackend.classes
 {
   public class Pessoa : IPessoa
   {
-    public string nome;
+    public string? nome;
 
-    public string endereco;
+    public Endereco? endereco;
 
     public float rendimento;
 

@@ -8,13 +8,30 @@ namespace AtividadeBackend.classes
 {
   public class PessoaFisica : Pessoa, IPessoaFisica
   {
-    public string cpf;
+    public string? cpf;
 
-    public DateTime dataNascimento;
+    public DateTime dataNascimento { get; set; }
 
-    public bool ValidaDataNascimento(string parDtNascimento)
+    public bool ValidaDataNascimento(string parDtN)
     {
-      throw new NotImplementedException();
+      DateTime dtC;
+
+      if (DateTime.TryParse(parDtN, out dtC))
+      {
+        DateTime dataAtual = DateTime.Today;
+
+        double anos = (dataAtual - dtC).TotalDays / 365;
+
+        if (anos >= 18)
+        {
+          return true;
+        }
+
+      }
+
+
+
+      return false;
     }
   }
 }

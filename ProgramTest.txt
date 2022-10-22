@@ -1,0 +1,7 @@
+﻿using AtividadeBackend.classes;
+
+Conta c = new Conta("123", "99939-3", 1200);
+c.setAgencia("4343");
+
+
+System.Console.WriteLine(c.agencia);
