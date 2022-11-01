@@ -1,0 +1,16 @@
+﻿using AtividadeBackend.classes;
+
+
+
+
+ContaCorrente cc = new ContaCorrente("123", "39339", 200, "Erick");
+
+System.Console.WriteLine(@$"
+
+  Conta: {cc.conta}
+  Saldo: {cc.getSaldo()}
+  Nome: {cc.correntista}
+
+");
+
+

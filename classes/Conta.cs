@@ -5,16 +5,13 @@ using System.Threading.Tasks;
 
 namespace AtividadeBackend.classes
 {
-  public class Conta
+  public abstract class Conta
   {
     public string? agencia { get; private set; }
     public string? conta { get; set; }
     private double saldo;
 
-    public Conta()
-    {
 
-    }
     public Conta(string parAgencia, string parConta, double parSaldo)
     {
       this.agencia = parAgencia;

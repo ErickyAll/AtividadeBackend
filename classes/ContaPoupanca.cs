@@ -5,8 +5,5 @@ using System.Threading.Tasks;
 
 namespace AtividadeBackend.classes
 {
-  public class ContaPoupanca
-  {
 
-  }
 }
