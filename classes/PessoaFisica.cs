@@ -12,6 +12,23 @@ namespace AtividadeBackend.classes
 
     public DateTime dataNascimento { get; set; }
 
+    public override float PagarImposto(float paRendimento)
+    {
+      if (paRendimento <= 1500)
+      {
+        return paRendimento;
+
+      }
+      else if (paRendimento > 1501 && paRendimento <= 5000)
+      {
+        return paRendimento - (paRendimento / 100) * 3;
+      }
+
+      return paRendimento - (paRendimento / 100) * 5;
+
+
+    }
+
     public bool ValidaDataNascimento(string parDtN)
     {
       DateTime dtC;

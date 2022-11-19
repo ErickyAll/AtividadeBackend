@@ -25,10 +25,10 @@ PessoaJuridica newPJ = new PessoaJuridica();
 
 newPJ.cnpj = "99.888.999/0001-90";
 newPJ.razaoSocial = "Senai";
-newPJ.rendimento = 900000f;
+newPJ.rendimento = 5000f;
 newPJ.nome = "Eduardo Costa";
 
-System.Console.WriteLine(newPJ.ValidarCnpj(newPJ.cnpj));
+System.Console.WriteLine(newPJ.PagarImposto(newPJ.rendimento));
 
 // System.Console.WriteLine(newPJ.rendimento);
 

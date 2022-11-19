@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using AtividadeBackend.interfaces;
 namespace AtividadeBackend.classes
 {
-  public class Pessoa : IPessoa
+
+  //sem PUBLIC na frente = internal = somente visivel no namespace que foi criado
+  public abstract class Pessoa : IPessoa
   {
     public string? nome;
 
@@ -13,9 +15,7 @@ namespace AtividadeBackend.classes
 
     public float rendimento;
 
-    public float PagarImposto(float paRendimento)
-    {
-      throw new NotImplementedException();
-    }
+    public abstract float PagarImposto(float paRendimento);
+
   }
 }
