@@ -13,15 +13,28 @@ endPessoaF.comercial = false;
 
 PessoaFisica novaPessoaFisica = new PessoaFisica();
 
-novaPessoaFisica.nome = "Erick";
+novaPessoaFisica.nome = Console.ReadLine();
 novaPessoaFisica.endereco = endPessoaF;
 novaPessoaFisica.rendimento = 1800f;
 novaPessoaFisica.cpf = "123456789-00";
 novaPessoaFisica.dataNascimento = "22/07/2003";
 
 
-System.Console.WriteLine(metodosPF.ValidaDataNascimento(novaPessoaFisica.dataNascimento));
-System.Console.WriteLine(metodosPF.PagarImposto(novaPessoaFisica.rendimento));
+Console.WriteLine(@$"
+
+Nome: {novaPessoaFisica.nome}
+
+Data de Nascimento: {novaPessoaFisica.dataNascimento}
+
+Maior de idade?: {metodosPF.ValidaDataNascimento(novaPessoaFisica.dataNascimento)}
+
+Rendimento Bruto: {novaPessoaFisica.rendimento}
+Rendimento liquido: {metodosPF.PagarImposto(novaPessoaFisica.rendimento)}
+
+");
+
+
+
 
 
 Endereco endPJ = new Endereco();
