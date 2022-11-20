@@ -10,7 +10,7 @@ namespace AtividadeBackend.classes
   {
     public string? cpf;
 
-    public DateTime dataNascimento { get; set; }
+    public string? dataNascimento { get; set; }
 
     public override float PagarImposto(float paRendimento)
     {
