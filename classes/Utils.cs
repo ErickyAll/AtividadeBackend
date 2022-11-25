@@ -21,5 +21,18 @@ namespace AtividadeBackend.classes
 
       Console.ResetColor();
     }
+
+
+
+    public static void ParadaConsole(string txt)
+    {
+
+      System.Console.WriteLine();
+      System.Console.WriteLine(txt);
+      System.Console.Write($"Tecle ENTER para continuar...");
+      Console.ReadLine();
+
+
+    }
   }
 }
