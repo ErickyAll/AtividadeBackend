@@ -119,22 +119,34 @@ do
             System.Console.WriteLine($"***** Lista Pessoas Físicas *****");
             System.Console.WriteLine();
 
-            if (cadastroPF.Count > 0)
-            {
+              using (StreamReader arquivo = new StreamReader($"./DadosPF/PessoasFisicas.txt"))
+                {
+                  string linha;
 
-              foreach (var pf in cadastroPF)
-              {
-                pf.Imprimir();
+                  while ((linha = arquivo.ReadLine()) != null)
+                  {
+                      System.Console.WriteLine($"{linha}");
+                  }
+                }
 
-              }
-            }
-            else
-            {
-              Console.ForegroundColor = ConsoleColor.DarkRed;
-              Console.WriteLine($"Lista Vazia");
-              Console.ResetColor();
-              Thread.Sleep(2000);
-            }
+            // if (cadastroPF.Count > 0)
+            // {
+
+            //   foreach (var pf in cadastroPF)
+            //   {
+            //     //pf.Imprimir();
+
+              
+
+            //   }
+            // }
+            // else
+            // {
+            //   Console.ForegroundColor = ConsoleColor.DarkRed;
+            //   Console.WriteLine($"Lista Vazia");
+            //   Console.ResetColor();
+            //   Thread.Sleep(2000);
+            // }
 
 
             Utils.ParadaConsole("Fim da Listagem");
