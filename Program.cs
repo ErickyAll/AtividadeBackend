@@ -73,19 +73,44 @@ do
 
             Endereco endPessoaF = new Endereco();
 
-            endPessoaF.logradouro = "Rua lala 01";
-            endPessoaF.numero = 15;
-            endPessoaF.comercial = false;
+            // System.Console.WriteLine($"Informe seu endereço:");
+            // endPessoaF.logradouro = Console.ReadLine();
+            // System.Console.WriteLine($"Numero:");
+            // endPessoaF.numero = int.Parse(Console.ReadLine());
+            // System.Console.WriteLine($"Endereço comercial? S/N");
+            // string endcomercial = Console.ReadLine();
+
+            // if (endcomercial.ToUpper() == "S")
+            // {
+            //   endPessoaF.comercial = true;
+            // }
+            // else
+            // {
+            //   endPessoaF.comercial = false;
+            // }
 
             PessoaFisica novaPessoaFisica = new PessoaFisica();
+            novaPessoaFisica.PreencherDados();
+            // System.Console.WriteLine($"Nome:");
+            // novaPessoaFisica.nome = Console.ReadLine();
 
-            novaPessoaFisica.nome = "Erick";
-            novaPessoaFisica.endereco = endPessoaF;
-            novaPessoaFisica.rendimento = 5000;
-            novaPessoaFisica.cpf = "071.626.982-28";
-            novaPessoaFisica.dataNascimento = "22/07/2003";
+            // novaPessoaFisica.endereco = endPessoaF;
+            // System.Console.WriteLine($"Qual seu rendimento?");
+            // novaPessoaFisica.rendimento = float.Parse(Console.ReadLine());
+            // System.Console.WriteLine($"Digite seu CPF:");
+            // novaPessoaFisica.cpf = Console.ReadLine();
+            // System.Console.WriteLine("Data de Nascimento:");
+            // novaPessoaFisica.dataNascimento = Console.ReadLine();
 
             cadastroPF.Add(novaPessoaFisica);
+
+            using ( StreamWriter arquivo = new StreamWriter($"./DadosPF/PessoasFisicas.txt", append: true) )
+            {
+              arquivo.WriteLine(@$"{novaPessoaFisica.nome}, {novaPessoaFisica.dataNascimento}, {novaPessoaFisica.cpf}, {novaPessoaFisica.endereco.logradouro}");
+              arquivo.Close();
+            }
+          
+
             Utils.ParadaConsole("Cadastro feito com sucesso!");
 
             break;
@@ -94,23 +119,21 @@ do
             System.Console.WriteLine($"***** Lista Pessoas Físicas *****");
             System.Console.WriteLine();
 
-            foreach (var pf in cadastroPF)
+            if (cadastroPF.Count > 0)
             {
 
+              foreach (var pf in cadastroPF)
+              {
+                pf.Imprimir();
 
-
-              Console.WriteLine(@$"
-
-            Nome: {pf.nome}
-
-            Data de Nascimento: {pf.dataNascimento}
-
-            Maior de idade?: {metodosPF.ValidaDataNascimento(pf.dataNascimento)}
-
-            Rendimento Bruto: {pf.rendimento}
-            Rendimento liquido: {metodosPF.PagarImposto(pf.rendimento)}
-
-            ");
+              }
+            }
+            else
+            {
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.WriteLine($"Lista Vazia");
+              Console.ResetColor();
+              Thread.Sleep(2000);
             }
 
 

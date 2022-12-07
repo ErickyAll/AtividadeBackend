@@ -43,12 +43,64 @@ namespace AtividadeBackend.classes
         {
           return true;
         }
+        else
+        {
+          return false;
+        }
 
       }
+      else
+      {
+        return false;
+      }
+
+    }
+
+    public void PreencherDados()
+    {
+      Endereco endPessoaF = new Endereco();
+
+
+      endPessoaF.logradouro = "Qn 29 Conj 67";
+
+      endPessoaF.numero = 55;
+
+      endPessoaF.comercial = false;
 
 
 
-      return false;
+
+      this.nome = Console.ReadLine();
+
+      this.endereco = endPessoaF;
+
+      this.rendimento = float.Parse(Console.ReadLine());
+
+      this.cpf = Console.ReadLine();
+
+      this.dataNascimento = Console.ReadLine();
+
+    }
+
+    public void Imprimir()
+    {
+
+
+      Console.WriteLine(@$"
+
+Nome: {this.nome}
+
+Data de Nascimento: {this.dataNascimento}
+
+Maior de idade?: {this.ValidaDataNascimento(this.dataNascimento)}
+
+Rendimento Bruto: {this.rendimento}
+Rendimento liquido: {this.PagarImposto(this.rendimento)}
+
+            ");
+
     }
   }
+
+
 }
