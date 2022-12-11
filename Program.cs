@@ -104,12 +104,12 @@ do
 
             cadastroPF.Add(novaPessoaFisica);
 
-            using ( StreamWriter arquivo = new StreamWriter($"./DadosPF/PessoasFisicas.txt", append: true) )
+            using (StreamWriter arquivo = new StreamWriter($"./DadosPF/{novaPessoaFisica.nome}.txt", append: true))
             {
               arquivo.WriteLine(@$"{novaPessoaFisica.nome}, {novaPessoaFisica.dataNascimento}, {novaPessoaFisica.cpf}, {novaPessoaFisica.endereco.logradouro}");
               arquivo.Close();
             }
-          
+
 
             Utils.ParadaConsole("Cadastro feito com sucesso!");
 
@@ -119,15 +119,15 @@ do
             System.Console.WriteLine($"***** Lista Pessoas Físicas *****");
             System.Console.WriteLine();
 
-              using (StreamReader arquivo = new StreamReader($"./DadosPF/PessoasFisicas.txt"))
-                {
-                  string linha;
+            using (StreamReader arquivo = new StreamReader($"./DadosPF/.txt"))
+            {
+              string linha;
 
-                  while ((linha = arquivo.ReadLine()) != null)
-                  {
-                      System.Console.WriteLine($"{linha}");
-                  }
-                }
+              while ((linha = arquivo.ReadLine()) != null)
+              {
+                System.Console.WriteLine($"{linha}");
+              }
+            }
 
             // if (cadastroPF.Count > 0)
             // {
@@ -136,7 +136,7 @@ do
             //   {
             //     //pf.Imprimir();
 
-              
+
 
             //   }
             // }
