@@ -25,4 +25,4 @@ Isso pode ocorrer devido ao nome do arquivo estar ligado ao nome cadastrado da p
 
 ## Contribuidores
 
-# Érick B. Almeida & Eduardo Mendes da Costa
+### Érick B. Almeida & Eduardo Mendes da Costa
